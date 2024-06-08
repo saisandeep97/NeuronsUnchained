@@ -1,4 +1,4 @@
-# NeuronsUnchained
+# NeuronsUnchained: : Crafting Neural Networks from the Ground Up
 
 Implementing Neural Networks from scratch and performing a classification & regression task to understand internal working on neural network. 
 
