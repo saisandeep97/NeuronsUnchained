@@ -2,22 +2,22 @@
 
 Implementing Neural Networks from scratch and performing a classification & regression task to understand internal working on neural network. 
 
-The library will be made up of documented classes and functions that allow users to easily construct
-a neural network with an arbitrary number of layers and nodes. Through implementing
-this library, we will understand more clearly the atomic components that make up a
+The library comprises documented classes and functions that allow users to easily construct
+a neural network with an arbitrary number of layers and nodes. By implementing
+this library, we will understand more clearly the atomic components of a
 basic neural network.
 
-## The `Layer` Class
+## The Layer Class
 
 For the layers we create in this assignment, it is worth it to create a parent class
-named `Layer` which defined the forward and backward functions that are used by all layers.
+named Layer which defines the forward and backward functions used by all layers.
 In this way, we can take advantage of polymorphism to easily compute the forward and
 backward passes of the entire network.
 
-## `Linear` Layer
+## Linear Layer
 
 A class that implements a linear layer. The class  inherits the `Layer` class
-and implement both a `forward` and `backward` function.
+and implement both a forward and backward function.
 For a given input, the forward pass is computed as
 
 $$
@@ -29,7 +29,7 @@ and $\mathbf{b} \in \mathbb{R}^h$,
 where $n$ is the number of samples, $d$ is the number of input features, and $h$
 is the number of output features.
 
-The backward pass computes the gradient with respect to the weights and bias:
+The backward pass computes the gradient concerning the weights and bias:
 
 $$
 \frac{d}{d\mathbf{w}} f(\mathbf{x}; \mathbf{w}) = \mathbf{x}\\
@@ -44,28 +44,28 @@ to complete a chain of backward passes.
 ## `Sigmoid` Function
 
 A class that implements the logistic sigmoid function.
-The class inherits the `Layer` class and implement both
+The class inherits the `Layer` class and implements both
 `forward` and `backward` functions.
 
-It is useful to store the output of forward pass of this layer
-as a class member so that it may be reused when calling `backward`.
+It is useful to store the output of the forward pass of this layer
+as a class member so that it may be reused when calling backward.
 
 ## Rectified Linear Unit (ReLU)
 
 A class that implements the rectified linear unit.
-The class inherits the `Layer` class and implement both
+The class inherits the `Layer` class and implements both
 `forward` and `backward` functions.
 
 ## Binary Cross-Entropy Loss
 
 A class that implements binary cross-entropy loss. This will be used when classifying the XOR problem.
-The class inherits the `Layer` class and implement both
+The class inherits the `Layer` class and implements both
 `forward` and `backward` functions.
 
 ## The `Sequential` Class
 
-In order to create a clean interface that includes multiple layers, we create
-a class that contains a list of layers which make up the network.
+To create a clean interface that includes multiple layers, we create
+a class that contains a list of layers that make up the network.
 The `Sequential` class will contain a list of layers.
 New layers can be added to it by appending them to the current list.
 This class will also inherit from the `Layer` class so that it can call forward
