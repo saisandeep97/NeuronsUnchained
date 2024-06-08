@@ -1,8 +1,6 @@
 # NeuronsUnchained
 
-Implementing Neural Netoworks from scratch and performing a classification & regression task to understand internal working on neural network. 
-
-## Neural Network Library
+Implementing Neural Networks from scratch and performing a classification & regression task to understand internal working on neural network. 
 
 The library will be made up of documented classes and functions that allow users to easily construct
 a neural network with an arbitrary number of layers and nodes. Through implementing
